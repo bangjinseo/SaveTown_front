@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Savetown Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+<header class="header">
+    <div class="logo-container">
+        <img src="logo_ver2-2.png"/>
+    </div>
+    <nav class="nav-icons">
+        <button class="nav-btn" id="account-btn">
+            <i class="fas fa-user icon"></i><span>계정</span>
+        </button>
+        <button class="nav-btn active" id="dashboard-btn">
+            <i class="fas fa-gauge icon"></i><span>대시보드</span>
+        </button>
+        <button class="nav-btn" id="student-btn">
+            <i class="fas fa-user-graduate icon"></i><span>학생관리</span>
+        </button>
+    </nav>
+</header>
+
+<div class="main-container">
+    <!-- Dashboard Sidebar -->
+    <aside class="sidebar" id="dashboard-sidebar">
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">프로젝트</h3>
+            <ul class="project-list">
+                <li><a href="#" class="new-project-link">+ 새 프로젝트 만들기</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Project Detail Sidebar -->
+    <aside class="sidebar hidden" id="project-sidebar">
+        <div class="sidebar-section">
+            <button class="back-btn" id="back-to-dashboard">← 대시보드</button>
+            <h3 class="sidebar-title">목록</h3>
+            <ul class="project-menu-list">
+                <li><a href="#" class="menu-link active">수업계획서</a></li>
+                <li><a href="#" class="menu-link">공지</a></li>
+                <li><a href="#" class="menu-link">강의자료실</a></li>
+                <li><a href="#" class="menu-link">강의콘텐츠</a></li>
+                <li><a href="#" class="menu-link">과제 및 평가</a></li>
+                <li><a href="#" class="menu-link">시험 및 성적</a></li>
+                <li><a href="#" class="menu-link">출결/학습 현황</a></li>
+                <li><a href="#" class="menu-link">성적</a></li>
+                <li><a href="#" class="menu-link">사용자 관리</a></li>
+                <li><a href="#" class="menu-link">이벤트 관리</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <!-- Dashboard Content -->
+        <div class="content-area" id="dashboard-content">
+            <h1 class="page-title">대시보드</h1>
+            <div class="dashboard-grid" id="dashboard-grid"></div>
+        </div>
+
+        <!-- Project Detail Content -->
+        <div class="content-area hidden" id="project-detail-content">
+            <h1 class="page-title" id="project-title">프로젝트 1</h1>
+
+            <div class="project-section">
+                <h2 class="section-title">최근 공지사항</h2>
+                <div class="notice-item">
+                    <span class="notice-badge">공지</span>
+                    <span class="notice-text">트럼프가 전쟁을 선포했습니다! 이제부터 식료품 가격이 10% 인상됩니다.</span>
+                </div>
+                <div class="notice-item">
+                    <span class="notice-badge">공지</span>
+                    <span class="notice-text">새로운 프로젝트 업데이트가 있습니다.</span>
+                </div>
+                <div class="notice-item">
+                    <span class="notice-badge">공지</span>
+                    <span class="notice-text">시스템 점검이 예정되어 있습니다.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Account Content -->
+        <div class="content-area hidden" id="account-content">
+            <h1 class="page-title">계정 관리</h1>
+            <p>계정 관리 페이지입니다.</p>
+        </div>
+
+        <!-- Student Content -->
+        <div class="content-area hidden" id="student-content">
+            <h1 class="page-title">학생관리</h1>
+            <p>학생관리 페이지입니다.</p>
+        </div>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
