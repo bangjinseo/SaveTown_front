@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <title>Savetown 로그인</title>
 
+    <!-- CSS -->
+    <link href="login.css" rel="stylesheet">
+
+    <!-- 로컬 폰트 적용 -->
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('Pretendard-Medium.otf') format('opentype');
+        }
+
+        body, h1, h2, h3, h4, h5, h6, p, span, input, a, button {
+            font-family: 'Pretendard', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body id="particles-js">
+
+<div class="animated bounceInDown">
+    <div class="header">
+        <img src="logo_ver2-2%202.png" id="logo" alt="Savetown 로고">
+    </div>
+    <div class="container">
+        <span class="error animated tada" id="msg"></span>
+        <form name="form1" class="box" onsubmit="return checkStuff()">
+            <h4>로그인</h4>
+            <input type="text" name="email" placeholder="아이디" autocomplete="off">
+            <i class="typcn typcn-eye" id="eye"></i>
+            <input type="password" name="password" placeholder="비밀번호" id="pwd" autocomplete="off">
+            <a href="#" class="forgetid">아이디 찾기 /</a>
+            <a href="#" class="forgetpass"> 비밀번호 찾기 |</a>
+            <a href="#" class="join"> 회원가입</a>
+            <input type="submit" value="로그인" class="btn1" id="signIn">
+        </form>
+    </div>
+</div>
 </body>
 </html>
