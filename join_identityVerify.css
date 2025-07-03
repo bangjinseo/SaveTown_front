@@ -49,17 +49,18 @@ body, html {
     font-weight: lighter;
 }
 
-.box input[type = "text"],.box input[type = "password"] {
-    display: block;
-    margin: 10px auto;
+/*아이디 입력칸*/
+.box input[type = "text"] {
+    display: inline-block;
+    margin: 150px auto;
     background: #ffffff;
     border: 0;
-    border-radius: 5px;
+    border-radius: 10px;
     border-style: solid;
     border-color: #b4b2b2;
     border-width: 0.3px;
-    padding: 14px 10px;
-    width: 320px;
+    padding: 16px 10px; /*아이디 입력칸 높이*/
+    width: 260px; /*아이디 입력칸 너비*/
     outline: none;
     color: #2d2d2d;
     -webkit-transition: all .2s ease-out;
@@ -72,70 +73,79 @@ body, html {
 ::-webkit-input-placeholder {
     color: #565f79;
 }
-.box input[type = "text"]:focus,.box input[type = "password"]:focus {
-    border: 1px solid #317A18;
-}
-/*아이디 찾기/비밀번호 찾기,회원가입*/
+/*전체적인 글씨 스타일*/
 a{
+    position: relative;
     font-size: 12px;
     color: #757575;
     text-decoration: none;
+    display: inline-block;
 }
-a:hover {
-    text-decoration: underline;
-}
-/* style the artificial checkbox */
+/* 버튼 기본 스타일 */
 .btn1 {
     border:0;
     border-radius: 10px;
     border: 0.5px solid #b4b2b2;
-    width: 340px;
     height: 49px;
     font-size: 15px;
     position: absolute;
-    left: 20%;
     transition: 0.3s;
     cursor: pointer;
-}
-#signIn{
     background: #a3c439;
     color: #ffffff;
-    top: 340px;
 }
-/* 공통 버튼 스타일 */
-.btn2 {
-    display: inline-block;
-    text-align: center;
-    line-height: 35px;
-    position: relative;
-    border: 0.5px solid #b4b2b2;
-    border-radius: 7px;
-    width: 150px;
-    height: 35px;
-    font-size: 12px;
-    font-weight: 550;
-    left: 0%;
-    margin-top: 30px;
-    margin-left: 8px;
-    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
-    cursor: pointer;
-    text-decoration: none;
+#btVerifi{ /*본인인증 버튼*/
+    left: 70%;
+    top: 60px;
+    width: 65px;
+    margin: 175px auto;
 }
-.forgetid {
-    position: relative;
-    float: right;
-    left: -45%;
-}.forgetpass {
-     position: relative;
-     float: right;
-     left: -21%;
- }
-.join {
-    position: relative;
-    float: right;
-    left: 0%;
+#btOk{ /*확인 버튼*/
+    left: 20%;
+    top: 370px;
+    width: 360px;
 }
 
+/*텍스트*/
+.mentSize1 {
+    float: right;
+    margin-top: 20px;
+}
+#identityVerify {right: 382px; color: #2a6b15}/*본인인증페이지*/
+#intsretInfo {left: -27%; color: #AAAAAA}
+#finishJoin {left: 55px; color: #AAAAAA}
+
+hr {
+    position: relative;
+    top: 40px;
+    left: 100px;
+    border: none;
+    border-top: 1.1px solid #aaaaaa; /* 원하는 색상으로 */
+}
+
+.mentSize2 {
+    position: relative;
+    font-size: 18px;
+    top: 45px;
+    text-align: left;
+}
+#m2_1{left:-20px; color: #2E2E2E;}
+#m2_2{left:65px; top:67px; color: #AAAAAA;}
+#m2_3{right:216px; top:130px; color: #757575;}
+
+/*약관동의 체크박스*/
+.box input[type = "checkbox"] {
+    position: relative;
+    top: 45px;
+    right: 288px;
+}
+#agreeMent {
+    color: #757575;
+    top: 43px;
+    right: 287px;
+}
+
+/*에러 시*/
 .error {
     background: #ff3333;
     text-align: center;
@@ -150,16 +160,6 @@ a:hover {
     left: 7.2%;
     color: white;
     display: none;
-}
-.footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    top: 605px;
-    width: 100%;
-    color: #757575;
-    font-size: 14px;
-    text-align: center;
 }
 
 @font-face {
