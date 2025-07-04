@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입-본인인증/약관동의</title>
+    <link href="join_intsretInfo.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('Pretendard-Medium.otf') format('opentype');
+        }
+
+        body, h1, h2, h3, h4, h5, h6, p, span, input, a, button {
+            font-family: 'Pretendard', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body id="particles-js">
+
+<div class="animated bounceInDown">
+    <div class="header">
+        <img src="logo_ver2-2%202.png" id="logo" alt="Savetown 로고">
+    </div>
+    <div class="container">
+        <span class="error animated tada" id="msg"></span>
+        <form name="form1" class="box" onsubmit="return checkStuff()">
+            <a class="mentSize1" id="identityVerify">본인인증/약관동의</a>
+            <a class="mentSize1" id="intsretInfo"><b>회원정보 입력</b></a>
+            <a class="mentSize1" id="finishJoin">가입완료</a>
+            <hr>
+            <a class="mentSize2" id="basicInfo"><b>┃기본정보</b><br></a>
+            <input type="text" name="name" id="name" placeholder="이름" autocomplete="off">
+            <input type="text" name="email" id="id" placeholder="아이디" autocomplete="off">
+            <input type="password" name="password" id="pwd" placeholder="비밀번호(8~20자리 영문,숫자,특수문자 조합)" autocomplete="off">
+            <input type="password" name="passwordVerification" id="pwdVeri" placeholder="비밀번호 확인" autocomplete="off">
+            <!-- 생년월일 -->
+            <div id=birth>
+                <input type="text" name="birthYear" placeholder="yyyy년" style="width: 101px;">
+                <input type="text" name="birthMonth" placeholder="mm월" style="width: 40px;">
+                <input type="text" name="birthDay" placeholder="dd일" style="width: 40px;">
+                <input type="submit" value="남자" class="btn1" id="male " style="width: 60px;">
+                <input type="submit" value="여자" class="btn1" id="female" style="width: 60px;">
+            </div>
+            <!-- 이메일 -->
+            <div id=email>
+                <input type="text" name="email1" placeholder="이메일" style="width: 165px;">
+                <span>@</span>
+                <input type="text" name="email2" placeholder="직접입력" style="width: 150px;">
+            </div>
+
+            <a class="mentSize2" id="shcoolInfo"><b>┃학교정보</b><br></a>
+            <!-- 학교명 + 버튼 -->
+            <div id="scName">
+                <input type="text" name="schoolName" placeholder="학교명으로 조회" style="width: 270px;">
+                <button type="button" class="btn1" style="width: 83px; height: 41px; background-color: #ffffff; color: #317A18; border: 1px solid #317A18;">학교 찾기</button>
+            </div>
+            <!-- 우편번호 -->
+            <input type="text" name="zipcode" id="zipcode" placeholder="우편번호">
+            <!-- 기본주소 -->
+            <input type="text" name="address1" id="address1" placeholder="기본주소(도로명)">
+            <!-- 상세주소 -->
+            <input type="text" name="address2" id="address2" placeholder="상세주소">
+
+            <input type="submit" value="확인" class="btn1" id="btOk">
+        </form>
+    </div>
+</div>
+</body>
+</html>
