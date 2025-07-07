@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입-가입완료</title>
+    <link href="join_completeJoin.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('Pretendard-Medium.otf') format('opentype');
+        }
+
+        body, h1, h2, h3, h4, h5, h6, p, span, input, a, button {
+            font-family: 'Pretendard', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+    <header class="header">
+        <img src="logo_ver2-2%202.png" id="logo" alt="Savetown 로고">
+    </header>
+
+    <main class="main-container">
+        <div class="container">
+            <div class="error" id="msg"></div>
+
+            <form name="form1" class="form-wrapper" onsubmit="return checkStuff()">
+                <!-- 진행 단계 표시 -->
+                <nav class="progress-nav">
+                    <a class="step inactive">본인인증/약관동의</a>
+                    <a class="step inactive">회원정보 입력</a>
+                    <a class="step active">가입완료</a>
+                </nav>
+
+                <hr class="divider">
+
+                <!-- 기본정보 섹션 -->
+                <section class="form-section">
+                    <h2 class="section-title">┃가입완료</h2>
+
+
+                </section>
+
+                <div class="submit-section">
+                    <button type="submit" class="btn-primary">확인</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+</body>
+</html>

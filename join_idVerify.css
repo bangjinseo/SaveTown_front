@@ -41,7 +41,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 40px 10px;/* 세로방향 | 가로방향 */
+    padding: 40px 20px;
 }
 
 .container {
@@ -50,6 +50,7 @@ html {
     border: 0.3px solid #b4b2b2;
     width: 100%;
     max-width: 570px;
+    min-height: 500px;
     padding: 30px 70px;
 }
 
@@ -58,6 +59,7 @@ html {
     display: flex;
     flex-direction: column;
     gap: 1px;
+    height: 100%;
 }
 
 /* 진행 단계 네비게이션 */
@@ -94,16 +96,103 @@ html {
 .form-section {
     display: flex;
     flex-direction: column;
-    margin: 10px 0;
+    margin: 5px 0;
     gap: 20px;
+    flex: 1;
 }
 
 .section-title {
     font-size: 18px;
     color: #2e2e2e;
     font-weight: bold;
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 25px;/* 위 | 오른쪽 | 아래 | 왼쪽 */
     text-align: left;
+}
+
+/* 설명 텍스트 */
+.description-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.main-description {
+    font-size: 16px;
+    color: #aaaaaa;
+    line-height: 1.5;
+    margin: 0 35px 0 35px;/* 위 | 오른쪽 | 아래 | 왼쪽 */
+}
+
+.sub-description {
+    font-size: 16px;
+    color: #757575;
+    line-height: 1.5;
+    margin: 0 35px 0 35px;/* 위 | 오른쪽 | 아래 | 왼쪽 */
+}
+
+.sub-description strong {
+    color: #2e2e2e;
+    font-weight: bold;
+}
+
+/* 아이디 입력 및 본인인증 그룹 */
+.id-verification-group {
+    margin-right: 35px;
+    margin-left: 35px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.id-verification-group input {
+    background: #ffffff;
+    border: 0.3px solid #b4b2b2;
+    border-radius: 10px;
+    padding: 16px 15px;
+    outline: none;
+    color: #2d2d2d;
+    font-size: 14px;
+    transition: all 0.2s ease-out;
+}
+
+.id-verification-group input:focus {
+    border-color: #2a6b15;
+    box-shadow: 0 0 0 2px rgba(42, 107, 21, 0.1);
+}
+
+.id-verification-group input::placeholder {
+    color: #565f79;
+}
+
+/* 약관동의 그룹 */
+.agreement-group {
+    display: flex;
+    justify-content: flex-start;
+
+    margin: 0 45px 10px 47px;/* 위 | 오른쪽 | 아래 | 왼쪽 */
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #757575;
+    gap: 8px;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    font-size: 14px;
+    color: #757575;
 }
 
 /* 버튼 스타일 */
@@ -130,11 +219,11 @@ html {
     color: #317a18;
     border: 0.5px solid #317a18;
     border-radius: 10px;
-    height: 42px;
+    height: 49px;
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
-    padding: 0 15px;
+    padding: 0 20px;
     white-space: nowrap;
 }
 
@@ -145,7 +234,8 @@ html {
 
 /* 제출 섹션 */
 .submit-section {
-    margin-top: 20px;
+    margin: auto 35px 0 35px;/* 위 | 오른쪽 | 아래 | 왼쪽 */
+    padding-top: 20px;
 }
 
 /* 에러 메시지 */
@@ -173,6 +263,11 @@ html {
         padding: 20px;
     }
 
+    .id-verification-group {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
     .progress-nav {
         flex-direction: column;
         gap: 10px;
@@ -181,17 +276,39 @@ html {
     .step {
         text-align: center;
     }
+
+    .description-text {
+        gap: 15px;
+    }
+
+    .main-description,
+    .sub-description {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 480px) {
     .container {
         padding: 15px;
+        min-height: 450px;
     }
 
     .form-section {
-        gap: 15px;
+        gap: 20px;
     }
 
+    .section-title {
+        font-size: 16px;
+    }
+
+    .main-description,
+    .sub-description {
+        font-size: 13px;
+    }
+
+    .id-verification-group input {
+        padding: 14px 12px;
+    }
 }
 
 /* 애니메이션 */

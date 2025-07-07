@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입-본인인증/약관동의</title>
+    <link href="join_idVerify.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('Pretendard-Medium.otf') format('opentype');
+        }
+
+        body, h1, h2, h3, h4, h5, h6, p, span, input, a, button {
+            font-family: 'Pretendard', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+    <header class="header">
+        <img src="logo_ver2-2%202.png" id="logo" alt="Savetown 로고">
+    </header>
+
+    <main class="main-container">
+        <div class="container">
+            <div class="error" id="msg"></div>
+
+            <form name="form1" class="form-wrapper" onsubmit="return checkStuff()">
+                <!-- 진행 단계 표시 -->
+                <nav class="progress-nav">
+                    <a class="step active">본인인증/약관동의</a>
+                    <a class="step inactive">회원정보 입력</a>
+                    <a class="step inactive">가입완료</a>
+                </nav>
+
+                <hr class="divider">
+
+                <!-- 본인인증 섹션 -->
+                <section class="form-section">
+                    <h2 class="section-title">┃본인인증/약관동의</h2>
+
+                    <div class="description-text">
+                        <p class="main-description">
+                            교육디지털원패스 로그인 페이지입니다.<br>
+                            본인인증 후 로그인 하실 수 있습니다.
+                        </p>
+
+                        <p class="sub-description">
+                            본인 확인을 위해<br>
+                            <strong>나이스 아이디</strong>를 입력해주세요.
+                        </p>
+                    </div>
+
+                    <!-- 아이디 입력 및 본인인증 -->
+                    <div class="id-verification-group">
+                        <input type="text" name="email" placeholder="아이디" autocomplete="off">
+                        <button type="button" class="btn-secondary" id="btVerifi">본인인증</button>
+                    </div>
+
+                    <!-- 약관동의 -->
+                    <div class="agreement-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agreeCheckbox" name="agree" value="yes">
+                            <span class="checkmark"></span>
+                            약관동의
+                        </label>
+                    </div>
+                </section>
+
+                <div class="submit-section">
+                    <button type="submit" class="btn-primary" id="btOk">확인</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+</body>
+</html>

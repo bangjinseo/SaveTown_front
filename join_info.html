@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입-본인인증/약관동의</title>
+    <link href="join_info.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('Pretendard-Medium.otf') format('opentype');
+        }
+
+        body, h1, h2, h3, h4, h5, h6, p, span, input, a, button {
+            font-family: 'Pretendard', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+    <header class="header">
+        <img src="logo_ver2-2%202.png" id="logo" alt="Savetown 로고">
+    </header>
+
+    <main class="main-container">
+        <div class="container">
+            <div class="error" id="msg"></div>
+
+            <form name="form1" class="form-wrapper" onsubmit="return checkStuff()">
+                <!-- 진행 단계 표시 -->
+                <nav class="progress-nav">
+                    <a class="step inactive">본인인증/약관동의</a>
+                    <a class="step active">회원정보 입력</a>
+                    <a class="step inactive">가입완료</a>
+                </nav>
+
+                <hr class="divider">
+
+                <!-- 기본정보 섹션 -->
+                <section class="form-section">
+                    <h2 class="section-title">┃기본정보</h2>
+
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="이름" autocomplete="off">
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" name="email" placeholder="아이디" autocomplete="off">
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="비밀번호(8~20자리 영문,숫자,특수문자 조합)" autocomplete="off">
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" name="passwordVerification" placeholder="비밀번호 확인" autocomplete="off">
+                    </div>
+
+                    <!-- 생년월일 및 성별 -->
+                    <div class="birth-gender-group">
+                        <div class="birth-inputs">
+                            <input type="text" name="birthYear" placeholder="yyyy년">
+                            <input type="text" name="birthMonth" placeholder="mm월">
+                            <input type="text" name="birthDay" placeholder="dd일">
+                        </div>
+                        <div class="gender-buttons">
+                            <button type="button" class="btn-secondary">남자</button>
+                            <button type="button" class="btn-secondary">여자</button>
+                        </div>
+                    </div>
+
+                    <!-- 이메일 -->
+                    <div class="email-group">
+                        <input type="text" name="email1" placeholder="이메일">
+                        <span class="email-separator">@</span>
+                        <input type="text" name="email2" placeholder="직접입력">
+                    </div>
+                </section>
+
+                <!-- 학교정보 섹션 -->
+                <section class="form-section">
+                    <h2 class="section-title">┃학교정보</h2>
+
+                    <!-- 학교명 검색 -->
+                    <div class="school-search-group">
+                        <input type="text" name="schoolName" placeholder="학교명으로 조회">
+                        <button type="button" class="btn-secondary">학교 찾기</button>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" name="zipcode" placeholder="우편번호">
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" name="address1" placeholder="기본주소(도로명)">
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" name="address2" placeholder="상세주소">
+                    </div>
+                </section>
+
+                <div class="submit-section">
+                    <button type="submit" class="btn-primary">확인</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+</body>
+</html>

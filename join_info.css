@@ -106,6 +106,105 @@ html {
     text-align: left;
 }
 
+/* 입력 그룹 */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group input {
+    background: #ffffff;
+    border: 0.3px solid #aaaaaa;
+    border-radius: 10px;
+    padding: 13px 15px;
+    outline: none;
+    color: #333;
+    font-size: 14px;
+    transition: all 0.2s ease-out;
+}
+
+.input-group input:focus {
+    border-color: #2a6b15;
+    box-shadow: 0 0 0 2px rgba(42, 107, 21, 0.1);
+}
+
+.input-group input::placeholder {
+    color: #565f79;
+}
+
+/* 생년월일 및 성별 그룹 */
+.birth-gender-group {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15px;
+    align-items: center;
+}
+/**/
+.birth-inputs {
+    display: grid;
+    grid-template-columns: 100px 80px 80px;
+    gap: 10px;
+}
+
+.birth-inputs input {
+    background: #ffffff;
+    border: 0.3px solid #aaaaaa;
+    border-radius: 10px;
+    padding: 13px 15px;
+    outline: none;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+}
+
+.gender-buttons {
+    display: grid;
+    grid-template-columns: 65px 65px;
+    gap: 5px;
+}
+
+/* 이메일 그룹 */
+.email-group {
+    display: grid;
+    grid-template-columns: 230px auto 166px;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.email-group input {
+    background: #ffffff;
+    border: 0.3px solid #aaaaaa;
+    border-radius: 10px;
+    padding: 13px 15px;
+    outline: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.email-separator {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* 학교 검색 그룹 */
+.school-search-group {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+}
+
+.school-search-group input {
+    background: #ffffff;
+    border: 0.3px solid #aaaaaa;
+    border-radius: 10px;
+    padding: 13px 15px;
+    outline: none;
+    color: #333;
+    font-size: 14px;
+}
+
 /* 버튼 스타일 */
 .btn-primary {
     background: #a3c439;
@@ -173,6 +272,29 @@ html {
         padding: 20px;
     }
 
+    .birth-inputs {
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 8px;
+    }
+
+    .birth-inputs input {
+        text-align: left;
+    }
+
+    .email-group {
+        grid-template-columns: 2fr auto 2fr;
+        gap: 8px;
+    }
+
+    .email-separator {
+        display: block;
+    }
+
+    .school-search-group {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
     .progress-nav {
         flex-direction: column;
         gap: 10px;
@@ -192,6 +314,35 @@ html {
         gap: 15px;
     }
 
+    .birth-gender-group {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .gender-buttons {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .birth-inputs {
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 6px;
+    }
+
+    .birth-inputs input {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    .email-group {
+        grid-template-columns: 2fr auto 2fr;
+        gap: 6px;
+    }
+
+    .email-group input {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
 }
 
 /* 애니메이션 */
